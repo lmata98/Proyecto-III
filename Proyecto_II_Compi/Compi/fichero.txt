@@ -1,0 +1,441 @@
+PROGRAM PRUEBA
+
+CONST
+MIN = 0;
+SALUDO = I;                       // ERROR 4
+SUMA = (3 * 2) + (5 * 4);               // ERROR 5
+A = YUCA;                       // ERROR 6
+B : ;                         // ERROR 7
+C = ;                         // ERROR 8
+D = "GEOVANNY";
+= ;                           // ERROR 10
+E = "GEOVANNY";
+ ;                            // ERROR 12
+
+VAR
+NUMERO,LIMITE,CONTADOR:INT;
+RESPUESTA : STRING ;
+VARSINTIPO ;                      // ERROR 17
+VARA:I;                         // ERROR 18
+ID:;                          // ERROR 19
+DID = 0;                        // ERROR 20
+A,B C:INT;  // SI: A,B,C:NT;              // ERROR 21
+HOLA:INT;
+:INT;                         // ERROR 23
+INT;                          // ERROR 24
+HOLA1:BOOLEAN;
+:;                            // ERROR 26
+HOLA1:STRING;
+;                             // ERROR 28
+
+PROCEDURE PROC1 (INT A)
+BEGIN
+CONST
+  MIN = ;                       // ERROR 33
+VAR
+  NUMERO,LIMITE,CONTADOR:NT;              // ERROR 35
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC:=1;                        // ERROR 40 PROC1 != PROC
+END
+
+PROCEDURE (INT A)                   // ERROR 43
+BEGIN
+PROC1:=1;
+END
+
+PROCEDURE PROC1 (INT : A)               // ERROR 48
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 (A INT)                 // ERROR 57
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 (INT A, I B)              // ERROR 66
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 )                   // ERROR 75 O (76,0)
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 INT A                 // ERROR 84
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 INT A)                  // ERROR 93
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1                     // ERROR 103
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1                     // ERROR 112
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 IT A)                 // ERROR 120
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1                     // ERROR 130
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 (INT A):INT
+BEGIN
+CONST
+  MIN = ;                       // ERROR 141
+VAR
+  NUMERO,LIMITE,CONTADOR:NT;              // ERROR 143
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC:=1;                        // ERROR 148 PROC1 != PROC
+END
+
+FUNCTION (INT A):INT                  // ERROR 151
+BEGIN
+PROC1:=1;
+END
+
+FUNCTION PROC1 (INT : A):INT              // ERROR 156
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+PROCEDURE PROC1 (A INT):INT               // ERROR 165
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 (INT A, I B) : BOOLEAN         // ERROR 174
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 ):INT                  // ERROR 183 O (76,0)
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 INT A : BOOLEAN              // ERROR 192
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 INT A):STRING              // ERROR 201
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1:REAL                   // ERROR 210
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1                      // ERROR 220
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 IT A):REAL               // ERROR 228
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 :INT                   // ERROR 237
+BEGIN
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;
+END
+
+FUNCTION PROC1 (INT A)                  // ERROR 247
+BEGIN
+CONST
+  MIN = 0;                      
+VAR
+  NUMERO,LIMITE,CONTADOR:INT;             
+WHILE (A>8) DO
+BEGIN   
+  I:=0;
+END
+PROC1:=1;                       
+END
+
+FUNCTION PROC1 (INT A):SHORTINT
+  BEGIN
+    CONST
+      MIN = 0;                      
+    VAR
+      NUMERO,LIMITE,CONTADOR:INT;             
+    WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+  PROC1:=1;                       
+END
+
+PROCEDURE FUNCION1()
+BEGIN
+  WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+  FUNCION1:= 0;
+END
+
+PROCEDURE FUNCION1()
+BEGIN
+  CONST
+      A := 123;             // ERROR
+  VAR
+    VARIABLE;               // ERROR
+    I: INT;
+  WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+  FUNCION1:= 0;
+END
+
+PROCEDURE FUNCION1( X:INT, Y:INT)     // ERROR
+BEGIN
+  WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+FUNCION1:=0;
+END
+
+
+PROCEDURE FUNCION3( INT, INT)       // ERROR
+BEGIN
+WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+FUNCION3:=0;
+END
+
+
+
+FUNCTION FUNCIONBUENA(INT X)
+BEGIN
+WHILE (A>8) DO
+      BEGIN   
+        FUNCIONBUENA(1);
+        FUNCION();
+        FUNCION(4;          // ERROR
+      END
+
+FUNCIONBUENA:=0;
+END
+
+
+FUNCTION FUNCION8             // ERROR
+BEGIN
+WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+FUNCION5:=0;
+END
+
+
+BEGIN
+  WHILE (A>8) DO
+    BEGIN   
+      I:=0;
+    END
+IF () THEN                  // ERROR
+BEGIN
+  I:=0;
+END
+ELSE
+BEGIN
+  I:=0;
+END
+
+IF (A<>TRUE THEN              // ERROR
+BEGIN
+  I:=0;
+END
+ELSE
+BEGIN
+  I:=0;
+END
+
+IF (X=2)                  // ERROR
+BEGIN
+  I:= X++;
+END
+ELSE
+BEGIN
+    I:= X--;
+END
+
+IF (X>4)  THEN                // ERROR
+BEGIN
+    IF (A>=2) THEN
+    BEGIN
+      I:= X++;
+    END
+    ELSE
+    BEGIN
+       I:=X--;
+    END
+END
+ELSE
+BEGIN
+  I:=X;
+END
+
+  I:=0;
+  READ;                   // ERROR
+    READ(X);
+    READ(123);                // ERROR
+
+    WRITE(C);
+    WRITE(C, 123, "HOLA");
+    WRITE( );               // ERROR
+
+WHILE () DO                 // ERROR
+        BEGIN
+          I:=0;
+        END
+
+        WHILE (A>8) DO
+        BEGIN
+          I:=0;
+        END
+
+
+        WHILE (A>8) DO
+          I:=0;//FALTA EL BEGIN
+        END
+
+
+        WHILE (A>8) DO
+        BEGIN
+            IF (B= FALSE) THEN
+                  I:=0;
+              ELSE
+                I:=0;
+        END
+
+FOR I>9 TO 8 DO               // ERROR
+      BEGIN
+        I:=0;
+      END
+
+      FOR X:= 7 TO (F>9) DO         // ERROR
+      BEGIN
+          I:=0;
+      END
+
+      FOR X:= 1 TO 10 DO
+      BEGIN
+          WHILE (A>8) DO
+        BEGIN
+          I:=0;
+        END
+      END
+
+WRITE("FIN");
+
+END
