@@ -172,8 +172,8 @@ class Yytoken {
     }
 
      public String current_line(){
-    int l = yyline+1;
-    return " (linea: "+l+")";
+    int l = yyline;
+    return yyline;
   }
 %}
 

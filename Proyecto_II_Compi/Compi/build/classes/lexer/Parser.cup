@@ -19,7 +19,7 @@ parser code {:
     public ArrayList<String> errores = new ArrayList<String>();
 
 /*Declaracion de variables para*/
-    public  Lexer lex;
+    public static  Lexer lex;
     int errors = 0;
     static boolean inCiclo=false;
     static ArrayList<String> errSemantic = new ArrayList<>();
@@ -30,11 +30,7 @@ parser code {:
     static ArrayList<ArrayList<String>> funciones = new ArrayList<>();
     static String funActual;
     static String tipoActual;
-    void setLex(Lexer l)
-{
-lex =l;
-
-}
+ 
 
       void main(String entrada,Interfaz console) {
         funActual=null;
@@ -50,8 +46,8 @@ lex =l;
           try {
              Reader reader = new BufferedReader(new FileReader(entrada));
              lex = new Lexer(reader);
-             setLex(new Lexer(reader));
-            Parser parser = new Parser(new Lexer(reader));
+            
+            Parser parser = new Parser(lex);
             parser.parse();
             System.out.println("CA,MILA");
             console.imprimir(lex.toStringErrores());
@@ -59,6 +55,7 @@ lex =l;
             parser.printTablaSimbolos();
             System.out.println("PPPPPPPPPPPPPPPPPPPPPPPP");
             printTablaSimbolos();
+            
           }
           catch (Exception e) {
             e.printStackTrace(System.out);
@@ -368,9 +365,9 @@ declarations_variables ::=    declaration_var
 
 declaration_var ::=   IDENTIFIER:e OP_TWOPOINTS DATA_TYPE OP_SEMI
 
-                    {:parser.agregarSimbolo(e, "Var", parser.getFunction(),  "Linea: "+String.valueOf(12));:}
+                    {:parser.agregarSimbolo(e, "Var", parser.getFunction(),  "Linea: "+String.valueOf(Parser.lex.current_line()));:}
                     | IDENTIFIER:q OP_COMMA declaration_var
-                        {:parser.agregarSimbolo(q, "Var", parser.getFunction(),  "Linea: "+String.valueOf(12));:}
+                        {:parser.agregarSimbolo(q, "Var", parser.getFunction(),  "Linea: "+String.valueOf(Parser.lex.current_line()));:}
                     /*| IDENTIFIER error:e OP_SEMI
                         {:
                             parser.report_error("ERROR #1: Declaración de variable incorrecta", e);
