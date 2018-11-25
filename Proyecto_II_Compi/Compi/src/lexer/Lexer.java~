@@ -1466,6 +1466,8 @@ public class Lexer implements java_cup.runtime.Scanner {
      public String current_line(){
     int l = yyline+1;
     return " (linea: "+l+")";
+    int l = yyline;
+    return l+"";
   }
 
 

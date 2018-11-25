@@ -120,7 +120,6 @@ parser code {:
       }
       errSemantic.add("Error en variable **"+name+"**uso de variable no declarada "+lex.current_line());
       return false;
-    } 
 
     static String getFunction(){
       if (funActual != null && !funActual.isEmpty())
@@ -328,31 +327,8 @@ declarations_constants ::=    declaration_constant
                             | declaration_constant declarations_constants;                        
 
 declaration_constant ::=  IDENTIFIER:id OPB_EQUAL value OP_SEMI
-                        /*| IDENTIFIER:id error:e OP_SEMI
-                            {:
-                                parser.report_error("ERROR #1:\n" + 
-                                                    "\tIDENTIFIER error OP_SEMI\n" +
-                                                    "\tDeclaración de constante incorrecta " + id + " ", e);
-                            :}
-                        | IDENTIFIER:id OPB_EQUAL error:e OP_SEMI
-                            {:
-                                parser.report_error("ERROR #2:\n" +
-                                                    "\tIDENTIFIER OPB_EQUAL error OP_SEMI\n" +
-                                                    "\tDeclaración de constante incorrecta " + id + " ", e);
-                            :}
-                        | IDENTIFIER:id error:e value OP_SEMI
-                            {:
-                                parser.report_error("ERROR #3:\n" +
-                                                    "\tIDENTIFIER OPB_EQUAL error OP_SEMI\n" +
-                                                    "\tDeclaración de constante incorrecta " + id + " ", e);
-                            :}
-                        | error:e OPB_EQUAL OP_SEMI
-                            {:
-                                parser.report_error("ERROR #4:\n" +
-                                                    "\terror:e OPB_EQUAL OP_SEMI\n" +
-                                                    "\tDeclaración de constante incorrecta ", e);
-                            :}*/
-                        | error:e OP_SEMI
+                            {:parser.agregarSimbolo(id, "const", parser.getFunction(),  "Encontrada en la linea: "+String.valueOf(Parser.lex.current_line()));:}
+                            | error:e OP_SEMI
                             {:
                                 parser.report_error("ERROR: Declaración de constante incorrecta ", e);
                             :};
@@ -364,18 +340,8 @@ declarations_variables ::=    declaration_var
                             | declaration_var declarations_variables;
 
 declaration_var ::=   IDENTIFIER:e OP_TWOPOINTS DATA_TYPE OP_SEMI
-
-                    {:parser.agregarSimbolo(e, "Var", parser.getFunction(),  "Linea: "+String.valueOf(Parser.lex.current_line()));:}
                     | IDENTIFIER:q OP_COMMA declaration_var
                         {:parser.agregarSimbolo(q, "Var", parser.getFunction(),  "Linea: "+String.valueOf(Parser.lex.current_line()));:}
-                    /*| IDENTIFIER error:e OP_SEMI
-                        {:
-                            parser.report_error("ERROR #1: Declaración de variable incorrecta", e);
-                        :}
-                    | IDENTIFIER OP_TWOPOINTS error:e OP_SEMI
-                        {:
-                            parser.report_error("ERROR #2 : Declaración de variable incorrecta", e);
-                        :}*/
                     | error:e OP_SEMI
                         {:
                             parser.report_error("ERROR: Declaración de variable incorrecta", e);
@@ -559,24 +525,13 @@ procedure ::=     RW_PROCEDURE IDENTIFIER:id OP_LEFTPARENTHESIS parameters OP_RI
                         parser.report_error("ERROR: Estructura de procedimiento incorrecta", e);
                   :};*/
 
-parameters ::=    DATA_TYPE IDENTIFIER
-                | DATA_TYPE IDENTIFIER parameters_list
                 | /* epsilon */
                 | error:e
                     {:
                         parser.report_error("ERROR: Estructura de paramatro incorrecta", e);
                     :}; 
 
-/*parameters ::=    DATA_TYPE IDENTIFIER
-                | DATA_TYPE IDENTIFIER OP_COMMA parameters
-                | /* epsilon *//*
-                | error:e 
-                    {:
-                        parser.report_error("ERROR: Estructura del parametros mal definida",e);
-                    :};*/
 
-parameters_list ::=   OP_COMMA DATA_TYPE IDENTIFIER
-                    | OP_COMMA DATA_TYPE IDENTIFIER parameters_list
                     | error:e
                         {:
                             parser.report_error("ERROR: Estructura del parametros mal definida", e);
