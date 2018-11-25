@@ -173,7 +173,7 @@ class Yytoken {
 
      public String current_line(){
     int l = yyline;
-    return yyline;
+    return l+"";
   }
 %}
 

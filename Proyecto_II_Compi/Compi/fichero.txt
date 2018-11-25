@@ -1,9 +1,31 @@
 PROGRAM P1
 
-VAR
-    C1,CD,D : INT;
-C2:BOOLEAN;
+CONST
+    C1 = 516;
+    C2 = C3;
 
-SA:INT;
+PROCEDURE PROCEDIMIENTO1( INT X, INT Y)
+BEGIN
+ FUNCION1:=0;
+END
+
+FUNCTION FUNCION4 (INT AS): INT
+BEGIN
+ FUNCION4:=0;
+END
+
+FUNCTION PROC1 (INT A,INT S,INT EDS,INT HJ):SHORTINT
+  BEGIN
+    CONST
+      MIN = 0;                      
+    VAR
+      NUMERO,LIMITE,CONTADOR:INT;             
+    WHILE (A>8) DO
+      BEGIN   
+        I:=0;
+      END
+  PROC1:=1;                       
+END
+
 BEGIN
 END
