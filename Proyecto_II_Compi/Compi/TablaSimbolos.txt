@@ -1,0 +1,5 @@
+0=>ObjetoTabla{nombre=D, tipo=Var, scope=Global, linea=Linea:  (linea: 5)}
+1=>ObjetoTabla{nombre=CD, tipo=Var, scope=Global, linea=Linea:  (linea: 5)}
+2=>ObjetoTabla{nombre=C1, tipo=Var, scope=Global, linea=Linea:  (linea: 5)}
+3=>ObjetoTabla{nombre=C2, tipo=Var, scope=Global, linea=Linea:  (linea: 7)}
+4=>ObjetoTabla{nombre=SA, tipo=Var, scope=Global, linea=Linea:  (linea: 8)}

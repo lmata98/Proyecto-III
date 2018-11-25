@@ -118,6 +118,7 @@ public class Interfaz extends javax.swing.JFrame {
         ParserController parser = new ParserController("fichero.txt",this);
         parser.generarCup();
         Main.generarLexer(path);
+        
         imprimir("Analizador Creado. Se procede a scannear:");
         try{
             ScannerController scanner = new ScannerController("fichero.txt", this);
