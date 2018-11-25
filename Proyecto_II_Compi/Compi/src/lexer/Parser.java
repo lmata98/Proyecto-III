@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import Main.Interfaz;
 
 /** CUP v0.11a beta 20060608 generated parser.
-  * @version Sun Nov 25 11:56:32 CST 2018
   * @version Sun Nov 25 16:18:01 CST 2018
   */
 public class Parser extends java_cup.runtime.lr_parser {
@@ -745,7 +744,6 @@ public class Parser extends java_cup.runtime.lr_parser {
       }
       errSemantic.add("Error en variable **"+name+"**uso de variable no declarada "+lex.current_line());
       return false;
-    } 
      } 
 
     static String getFunction(){
