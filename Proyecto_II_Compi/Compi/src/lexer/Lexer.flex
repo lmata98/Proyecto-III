@@ -20,7 +20,7 @@ class Yytoken {
         this.name = name;
         this.type = type;
     }
-
+  
     @Override
     public String toString() {
         String token = name + "\t" + "\t" + type + "\t" + "\t" + lines;
@@ -82,6 +82,7 @@ class Yytoken {
     public void setLines(ArrayList<Line> lines) {
         this.lines = lines;        
     }
+    
     
 }
 
@@ -169,6 +170,11 @@ class Yytoken {
     private Symbol symbol(int type, Object value) {
         return new Symbol(type, yyline, yycolumn, value);
     }
+
+     public String current_line(){
+    int l = yyline+1;
+    return " (linea: "+l+")";
+  }
 %}
 
 // Inicializador de variables

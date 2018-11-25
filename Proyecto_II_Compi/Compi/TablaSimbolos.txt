@@ -1,0 +1,6 @@
+0=>ObjetoTabla{nombre=CONTADOR, tipo=Var, scope=Global, linea=Linea: 12}
+1=>ObjetoTabla{nombre=LIMITE, tipo=Var, scope=Global, linea=Linea: 12}
+2=>ObjetoTabla{nombre=NUMERO, tipo=Var, scope=Global, linea=Linea: 12}
+3=>ObjetoTabla{nombre=RESPUESTA, tipo=Var, scope=Global, linea=Linea: 12}
+4=>ObjetoTabla{nombre=A, tipo=Var, scope=Global, linea=Linea: 12}
+5=>ObjetoTabla{nombre=I, tipo=Var, scope=Global, linea=Linea: 12}

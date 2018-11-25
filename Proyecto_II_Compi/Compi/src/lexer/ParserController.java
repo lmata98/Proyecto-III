@@ -39,10 +39,7 @@ public class ParserController {
             Reader reader = new BufferedReader(new FileReader(path));
             Lexer lexer = new Lexer(reader);
             Parser parser = new Parser(lexer);
-            parser.parse();
-            console.imprimir(lexer.toStringErrores());
-            console.imprimir(parser.toStringErrores());
-     
+            parser.main(path,console);
             /*System.out.println("\nLista de errores presentes: ");
             console.imprimir("Lista de errores presentes");*/
            

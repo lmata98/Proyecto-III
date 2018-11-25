@@ -16,16 +16,16 @@ public class Simbolos extends java_cup.runtime.Symbol {
   private int linea;
   private int columna;
 
-  public Simbolos(int type, int linea, int columna) {
-    this(type, linea, columna, -1, -1, null);
+  public Simbolos(int tipo, int linea, int columna) {
+    this(tipo, linea, columna, -1, -1, null);
   }
 
-  public Simbolos(int type, int linea, int columna, Object value) {
-    this(type, linea, columna, -1, -1, value);
+  public Simbolos(int tipo, int linea, int columna, Object value) {
+    this(tipo, linea, columna, -1, -1, value);
   }
 
-  public Simbolos(int type, int linea, int columna, int left, int right, Object value) {
-    super(type, left, right, value);
+  public Simbolos(int tipo, int linea, int columna, int left, int right, Object value) {
+    super(tipo, left, right, value);
     this.linea = linea;
     this.columna = columna;
   }
